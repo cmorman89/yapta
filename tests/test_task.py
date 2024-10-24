@@ -17,9 +17,10 @@ TASK_PRIORITY = "High"
 def test_task_construction():
     '''Tests the `Tasks` constructor and attributes'''
     task = Task(id=TASK_ID, title=TASK_TITLE, description=TASK_DESC,
-                due_date=TASK_DUE_DATE, priority=TASK_PRIORITY)
+                due_date=TASK_DUE_DATE, priority=TASK_PRIORITY, complete=True)
     assert task.id == TASK_ID
     assert task.title == TASK_TITLE
     assert task.description == TASK_DESC
     assert task.due_date == TASK_DUE_DATE
     assert task.priority == TASK_PRIORITY
+    assert task.complete is True

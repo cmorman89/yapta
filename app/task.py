@@ -12,12 +12,14 @@ from dataclasses import dataclass
 @dataclass
 class Task:
     '''
-    Responsibility: `Task` class primarily holds task-related data and identifiers
+    Responsibility: `Task` class primarily holds task-related data and
+        other identifiers
     '''
     def __init__(self, id=None, title="Untitled Task", description=None,
-                 due_date=None, priority=None):
+                 due_date=None, priority=None, complete=False):
         self.id = id                    # placeholder
         self.title = title
         self.description = description
         self.due_date = due_date
         self.priority = priority
+        self.complete = complete
