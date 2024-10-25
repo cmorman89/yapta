@@ -16,6 +16,7 @@ class TaskList:
     The `TaskList` class is responsible for holding and performing CRUD
     operations on `Tasks`
     '''
+    list_id: str = None
     task_queue: list[Task] = field(default_factory=list)
     list_name: str = None
 

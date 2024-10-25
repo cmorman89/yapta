@@ -1,4 +1,4 @@
-'''Tests the app/task.py module'''
+'''Tests the app/task_list.py module'''
 
 
 from datetime import datetime
@@ -23,3 +23,5 @@ def test_add_task_to_list():
     task_list.add_task(task)
 
     assert task_list.task_queue[0] == task
+    
+
