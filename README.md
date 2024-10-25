@@ -17,12 +17,13 @@ On the technical side, I'm embracing the tools that keep real-world projects afl
 So, before you dismiss this as just another "Example Task 1" generator 📒, take a closer look. It's my proof that I have at least a tenuous grasp of Python—or, at the very least, that I can make a list of things to do and then cross off "build another to-do app" from it:
 
 > **To Do:**
+>
 > - [X] ~~Build another to-do app~~
 > - [ ] Impress recruiters
-> - [ ] *Get a job*
+> - [ ] ***[Get a job](mailto:recruiters@cmorman.com"recruiters@cmorman.com")***
 
 *It's not just another Python to-do app, it's...*
 
 ### ***Yet Another Python To Do App***
 
-(But really, recruiters—call me 📞)
+(But really, recruiters—[call me 📞](mailto:recruiters@cmorman.com"recruiters@cmorman.com"))
