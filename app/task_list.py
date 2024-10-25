@@ -33,21 +33,35 @@ class TaskList:
         # If it is an integer, use it as index
         if isinstance(task_id, int):
             return self.task_queue[task_id]
+
         # Otherwise lookup by task_id
         # Lookup logic is in `get_task_position`
-        return self.task_queue[self.get_task_pos(task_id)]
+        return self.task_queue[self.get_task_position(task_id)]
 
-    def get_task_pos(self, task_id):
+    def get_task_position(self, task_id):
         '''Returns the index number of task if found'''
         # Iterate task_queue
-        for i, task_item in enumerate(self.task_queue):
-            # Look for task_id match
-            if task_item.task_id == task_id:
-                return i
+        if self.task_queue:
+            for i, task_item in enumerate(self.task_queue):
+                # Look for task_id match
+                if task_item.task_id == task_id:
+                    return i    
+        return None
 
     # CRUD: Update
     def update_task_position(self, task_id, i):
         '''Responsible for updating task position in list'''
+        # Check if there is a task queue
+        if self.task_queue:
+            # Make sure new position within bounds
+            # -1 for list[0], -1 for moved task (list.pop())
+            max_index = len(self.task_queue) - 2
+            i = max_index if i > max_index else i
+            # Find and remove task from `task_queue` before inserting
+            # it at index position i
+            self.task_queue.insert(
+                i, self.task_queue.pop(self.get_task_position(task_id))
+                )
         return self
 
     # CRUD: Delete

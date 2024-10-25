@@ -32,6 +32,7 @@ def test_get_task_from_list():
     task_list.add_task(task)
 
     assert task_list.get_task(task_id)
+    assert task_list.get_task(0)
 
 
 def test_remove_task_from_list():
@@ -46,3 +47,18 @@ def test_remove_task_from_list():
     task_list.remove_task(task_id)
 
     assert task_list.task_queue[0] == task
+
+
+def test_update_task_position():
+    '''Find a task and move it to a new position'''
+    task_list = TaskList()
+    task_list.add_task(Task()).add_task(Task()).add_task(Task())
+    
+    # Get the task_id of the first task
+    task_id = task_list.get_task(0).task_id
+    
+    # Move that task to i = 1
+    task_list.update_task_position(task_id, 1)
+    
+    # Get element 1 and check if it matches saved task_id
+    assert task_list.get_task(1).task_id == task_id
