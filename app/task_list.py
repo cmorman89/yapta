@@ -3,7 +3,6 @@ Module:         task_list.py
 Description:    Defines the `TaskList` class that holds `Tasks` and is
                 responsible for task CRUD
 Author:         Charles Morman
-
 '''
 
 from dataclasses import dataclass, field
@@ -56,7 +55,7 @@ class TaskList:
             self.list_name = list_name
         else:
             self.list_name = None
-    
+
     def update_task_position(self, task_id, i):
         '''Responsible for updating task position in list'''
         # Check if there is a task queue

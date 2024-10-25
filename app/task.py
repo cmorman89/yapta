@@ -2,7 +2,6 @@
 Module:         task.py
 Description:    Defines the `Task` class that holds task data
 Author:         Charles Morman
-
 '''
 
 

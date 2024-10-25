@@ -66,11 +66,11 @@ def test_update_task_position():
 
 def test_update_task_list_name():
     '''Update the task list's name'''
-    task_list = TaskList()    
-    
+    task_list = TaskList()
+
     task_list.update_task_list_name("New Name")
     assert task_list.list_name == "New Name"
-    
+
     task_list.update_task_list_name("")
     assert not task_list.list_name
     task_list.update_task_list_name(None)
