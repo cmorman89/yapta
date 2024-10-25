@@ -1,6 +1,6 @@
 '''
 Module:     task.py
-Descrp:     Defines the `Task` class that holds task data
+Descr.:     Defines the `Task` class that holds task data
 Author:     Charles Morman
 
 '''
@@ -17,7 +17,7 @@ class Task:
     '''
     def __init__(self, task_id=None, title="Untitled Task", description=None,
                  due_date=None, priority=None, complete=False):
-        self.task_id = task_id                    # placeholder
+        self.task_id = task_id                    
         self.title = title
         self.description = description
         self.due_date = due_date
