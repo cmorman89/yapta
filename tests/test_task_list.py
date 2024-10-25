@@ -24,3 +24,12 @@ def test_add_task_to_list():
 
     assert task_list.task_queue[0] == task
 
+
+def test_get_task_from_list():
+    '''Retreive a task by ID'''
+    task = Task()
+    task_id = task.task_id
+    task_list = TaskList()
+    task_list.add_task(task)
+
+    assert task_list.get_task(task_id)

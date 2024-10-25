@@ -11,7 +11,6 @@ from app.task import Task
 from app.utils.unique_id import UniqueId
 
 
-
 @dataclass
 class TaskList:
     '''
@@ -31,7 +30,10 @@ class TaskList:
     # CRUD: Read
     def get_task(self, task_id):
         '''Responsible for fetching task from list'''
-        return self
+        for task_item in self.task_queue:
+            if task_item.task_id == task_id:
+                return task_item
+            return None
 
     # CRUD: Update
     def update_task_position(self, task_id, i):

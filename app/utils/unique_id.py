@@ -5,7 +5,7 @@ Author:         Charles Morman
 '''
 
 
-from uuid import uuid4
+from uuid import uuid4, UUID
 
 
 class UniqueId:
@@ -14,7 +14,8 @@ class UniqueId:
     def __init__(self):
         self.id_value = self.generate_id()
 
-    def generate_id(self):
+    @staticmethod
+    def generate_id():
         '''
         Use `uuid4` to generate a unique id; separate func for later updates
         if needed
@@ -22,4 +23,4 @@ class UniqueId:
         return str(uuid4())
 
     def __str__(self):
-        return str(self.id_value)
+        return self.id_value
