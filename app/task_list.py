@@ -73,3 +73,11 @@ class TaskList:
                     self.task_queue.pop(i)
                     return self
                 return self
+
+    def print_todo(self):
+        '''Print the to-do list to the terminal'''
+        if self.list_name:
+            print(f'{self.list_name}:')
+        if self.task_queue:
+            for i, task_item in enumerate(self.task_queue):
+                print(f'{i + 1}:\t{task_item.task_name}')

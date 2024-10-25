@@ -1,5 +1,6 @@
 # Yet Another Python To-Do App (YAPTA)
 
+## Intro
 Welcome to the To-Do List of To-Do Lists, affectionately dubbed **"Yet Another Python To-Do App" (YAPTA).**
 
 ***Wait! "Not another Python to-do app!"*** 😱😱😱
@@ -30,7 +31,40 @@ So, before you dismiss this as just another "Example Task 1" generator 📒, tak
 
 ---
 
-### packages
+## Features
 
-- `pytest`
-- `black`
+- **Task Creation:** Each task is defined by the `Task` class, which holds task-related attributes (ie. `task_id`, `task_name`, `due_date`, etc.)
+- **Task Updating:** The `Task` class has methods to set and update its attributes. `task_id` is immutable.
+- **CRUD Operations:** The `TaskList` class performs `add_task()`, `get_task()`, `remove_task()`, etc. to tasks in list in a `task_queue`
+- **UUID Management:** The `UniqueId` class ensures a standardized UUID is accessible to any object requiring a unique identifer (such as `Task`, `TaskList`).
+- **Robust Testing:** Includes unit and integration tests covering core functionality, data integrity, and interactions between `Task` and `TaskList`.
+
+---
+
+## Project Roadmap
+
+- **Frontend Development:**
+  - React, TypeScript, JavaScript, tailwindcss, HTML5 for responsive web frontend
+  - Dynamic task/element theming
+  - Brand standards: logo, colors, typeface, etc
+  - 
+- **Backend Development:**
+  - Recurring tasks
+  - Multiple task lists
+  - Save and load tasks
+  - Investigate database use (SQLite?)
+
+---
+
+## Techncical Stack
+
+- **`Python`:** Core language for backend development.
+- **`pytest`:** Testing framework for unit and integration tests.
+- **`black`:** Code formatter ensuring PEP 8 compliance.
+- **`uuid`:** Library used for generating unique task and list IDs.
+  
+---
+
+## Setup Instructions
+
+Coming Soon! 
