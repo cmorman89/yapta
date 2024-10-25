@@ -16,12 +16,13 @@ class TaskList:
     The `TaskList` class is responsible for holding and performing CRUD
     operations on `Tasks`
     '''
-    task_list: list[Task] = field(default_factory=list)
+    task_queue: list[Task] = field(default_factory=list)
     list_name: str = None
 
     # CRUD: Create
     def add_task(self, task):
         '''Responsible for adding a task to the list'''
+        self.task_queue.append(task)
         return self
 
     # CRUD: Read
