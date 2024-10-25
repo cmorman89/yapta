@@ -7,7 +7,7 @@ Author:     Charles Morman
 '''
 
 
-from app.task import Task
+# from app.task import Task
 
 
 class TaskBuilder:
