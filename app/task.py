@@ -18,15 +18,15 @@ class Task:
     '''
 
     task_id: UniqueId = UniqueId()
-    title: str = str(task_id)
+    task_name: str = str(task_id)
     description: str = None
     due_date: str = None
     priority: str = None
     complete: bool = False
 
-    def update_title(self, title):
+    def update_name(self, title):
         '''Update task `title`'''
-        self.title = title
+        self.task_name = title
         return self
 
     def update_description(self, description):

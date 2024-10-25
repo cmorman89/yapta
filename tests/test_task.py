@@ -12,7 +12,7 @@ TASK_DESC = "Remember to get milk from the store."
 TASK_DUE_DATE = datetime(2024, 9, 30)
 TASK_DUE_DATE_STR = "9/30/2024"
 TASK_PRIORITY = "High"
-Template_Task = Task(title=TASK_TITLE,
+Template_Task = Task(task_name=TASK_TITLE,
                      description=TASK_DESC,
                      due_date=TASK_DUE_DATE,
                      priority=TASK_PRIORITY,
@@ -22,11 +22,11 @@ Template_Task = Task(title=TASK_TITLE,
 
 def test_task_construction():
     '''Tests the `Tasks` constructor and attributes'''
-    task = Task(title=TASK_TITLE, description=TASK_DESC,
+    task = Task(task_name=TASK_TITLE, description=TASK_DESC,
                 due_date=TASK_DUE_DATE, priority=TASK_PRIORITY, complete=True
                 )
     assert isinstance(task.task_id, UniqueId)
-    assert task.title == TASK_TITLE
+    assert task.task_name == TASK_TITLE
     assert task.description == TASK_DESC
     assert task.due_date == TASK_DUE_DATE
     assert task.priority == TASK_PRIORITY
@@ -36,10 +36,10 @@ def test_task_construction():
 def test_task_setters():
     '''Tests the various setters in `Task`'''
     task = Task()
-    (task.update_title(TASK_TITLE).update_description(TASK_DESC)
+    (task.update_name(TASK_TITLE).update_description(TASK_DESC)
         .update_due_date(TASK_DUE_DATE).update_priority(TASK_PRIORITY)
         .toggle_complete())
-    assert task.title == TASK_TITLE
+    assert task.task_name == TASK_TITLE
     assert task.description == TASK_DESC
     assert task.due_date == TASK_DUE_DATE
     assert task.priority == TASK_PRIORITY
