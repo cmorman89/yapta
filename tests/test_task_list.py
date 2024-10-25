@@ -1,7 +1,6 @@
 '''Tests the app/task_list.py module'''
 
 
-from datetime import datetime
 from app.task import Task
 from app.task_list import TaskList
 
@@ -33,3 +32,17 @@ def test_get_task_from_list():
     task_list.add_task(task)
 
     assert task_list.get_task(task_id)
+
+
+def test_remove_task_from_list():
+    '''Remove a task based on `task_id`'''
+    task = Task()
+    task_id = task.task_id
+    task_list = TaskList()
+    task_list.add_task(task)
+    task = Task()
+    task_list.add_task(task)
+
+    task_list.remove_task(task_id)
+
+    assert task_list.task_queue[0] == task

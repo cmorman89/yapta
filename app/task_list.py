@@ -41,6 +41,10 @@ class TaskList:
         return self
 
     # CRUD: Delete
-    def delete_task(self, task_id):
+    def remove_task(self, task_id):
         '''Responsible for removing a task from the list'''
-        return self
+        for i, task_item in enumerate(self.task_queue):
+            if task_item.task_id == task_id:
+                self.task_queue.pop(i)
+                return self
+            return self
