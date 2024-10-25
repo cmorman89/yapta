@@ -12,14 +12,20 @@ TASK_DESC = "Remember to get milk from the store."
 TASK_DUE_DATE = datetime(2024, 9, 30)
 TASK_DUE_DATE_STR = "9/30/2024"
 TASK_PRIORITY = "High"
-# Template_Task = Task(task_id=TASK_ID, title=TASK_TITLE, description=TASK_DESC,
-#                    due_date=TASK_DUE_DATE, priority=TASK_PRIORITY, complete=True)
+Template_Task = Task(task_id=TASK_ID,
+                     title=TASK_TITLE,
+                     description=TASK_DESC,
+                     due_date=TASK_DUE_DATE,
+                     priority=TASK_PRIORITY,
+                     complete=True
+                     )
 
 
 def test_task_construction():
     '''Tests the `Tasks` constructor and attributes'''
     task = Task(task_id=TASK_ID, title=TASK_TITLE, description=TASK_DESC,
-                due_date=TASK_DUE_DATE, priority=TASK_PRIORITY, complete=True)
+                due_date=TASK_DUE_DATE, priority=TASK_PRIORITY, complete=True
+                )
     assert task.task_id == TASK_ID
     assert task.title == TASK_TITLE
     assert task.description == TASK_DESC
