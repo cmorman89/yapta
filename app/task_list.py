@@ -45,7 +45,7 @@ class TaskList:
             for i, task_item in enumerate(self.task_queue):
                 # Look for task_id match
                 if task_item.task_id == task_id:
-                    return i    
+                    return i
         return None
 
     # CRUD: Update
