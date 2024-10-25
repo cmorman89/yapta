@@ -44,15 +44,15 @@ So, before you dismiss this as just another "Example Task 1" generator 📒, tak
 ## Project Roadmap
 
 - **Frontend Development:**
-  - React, TypeScript, JavaScript, tailwindcss, HTML5 for responsive web frontend
-  - Dynamic task/element theming
-  - Brand standards: logo, colors, typeface, etc
-  - 
+    - Develop a responsive web front end using React, TypeScript, JavaScript, Tailwind CSS, and HTML5.
+    - Implement dynamic task and element theming.
+    - Create brand standards including a logo, colors, and typography.
+  
 - **Backend Development:**
-  - Recurring tasks
-  - Multiple task lists
-  - Save and load tasks
-  - Investigate database use (SQLite?)
+    - Introduce recurring tasks functionality.
+    - Enable multiple task lists.
+    - Implement task persistence (save and load functionality).
+    - Investigate database options (e.g., SQLite) for storage.
 
 ---
 
