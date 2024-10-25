@@ -1,7 +1,7 @@
 '''
-Module:     task.py
-Descr.:     Defines the `Task` class that holds task data
-Author:     Charles Morman
+Module:         task.py
+Description:    Defines the `Task` class that holds task data
+Author:         Charles Morman
 
 '''
 
