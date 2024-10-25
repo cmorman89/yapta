@@ -27,3 +27,10 @@ So, before you dismiss this as just another "Example Task 1" generator 📒, tak
 ### ***Yet Another Python To Do App***
 
 ##### (But really, recruiters—[call me 📞](mailto:recruiters@cmorman.com"recruiters@cmorman.com"))
+
+---
+
+### packages
+
+- `pytest`
+- `black`
