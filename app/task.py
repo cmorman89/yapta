@@ -6,7 +6,7 @@ Author:         Charles Morman
 '''
 
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from app.utils.unique_id import UniqueId
 
 
@@ -17,7 +17,7 @@ class Task:
         other identifiers, updates self values
     '''
 
-    task_id: UniqueId = UniqueId()
+    task_id: UniqueId = field(default_factory=UniqueId)
     task_name: str = str(task_id)
     description: str = None
     due_date: str = None

@@ -17,7 +17,7 @@ class TaskList:
     The `TaskList` class is responsible for holding and performing CRUD
     operations on `Tasks`
     '''
-    list_id: UniqueId = UniqueId()
+    list_id: UniqueId = field(default_factory=UniqueId)
     list_name: str = str(list_id)
     task_queue: list[Task] = field(default_factory=list)
 
