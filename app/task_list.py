@@ -30,10 +30,16 @@ class TaskList:
     # CRUD: Read
     def get_task(self, task_id):
         '''Responsible for fetching task from list'''
-        for task_item in self.task_queue:
+        # Lookup logic in `get_task_position`
+        return self.task_queue[self.get_task_pos(task_id)]
+
+    def get_task_pos(self, task_id):
+        '''Returns the index number of task if found'''
+        # Iterate task_queue
+        for i, task_item in enumerate(self.task_queue):
+            # Look for task_id match
             if task_item.task_id == task_id:
-                return task_item
-            return None
+                return i
 
     # CRUD: Update
     def update_task_position(self, task_id, i):
