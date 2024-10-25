@@ -11,8 +11,8 @@ def test_task_list_construction():
     task = Task()
     task_list = TaskList()
     assert isinstance(task_list, TaskList)
-
-    task_list = TaskList([task])
+    print(task_list)
+    task_list = TaskList(task_queue=[task])
     assert task_list.task_queue[0] == task
 
 

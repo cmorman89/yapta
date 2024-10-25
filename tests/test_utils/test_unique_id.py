@@ -11,4 +11,4 @@ def test_unique_id_construction():
     uuid_3 = UniqueId()
     uuid_4 = UniqueId()
     
-    assert uuid_0 != uuid_1 != uuid_2 != uuid_3 != uuid4
+    assert uuid_0 != uuid_1 != uuid_2 != uuid_3 != uuid_4

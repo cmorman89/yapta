@@ -8,6 +8,8 @@ Author:         Charles Morman
 
 from dataclasses import dataclass, field
 from app.task import Task
+from app.utils.unique_id import UniqueId
+
 
 
 @dataclass
@@ -16,9 +18,9 @@ class TaskList:
     The `TaskList` class is responsible for holding and performing CRUD
     operations on `Tasks`
     '''
-    list_id: str = None
+    list_id: UniqueId = UniqueId()
+    list_name: str = str(list_id)
     task_queue: list[Task] = field(default_factory=list)
-    list_name: str = None
 
     # CRUD: Create
     def add_task(self, task):

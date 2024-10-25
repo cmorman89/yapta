@@ -7,6 +7,7 @@ Author:         Charles Morman
 
 
 from dataclasses import dataclass
+from app.utils.unique_id import UniqueId
 
 
 @dataclass
@@ -15,14 +16,13 @@ class Task:
     Responsibility: `Task` class primarily holds task-related data and
         other identifiers, updates self values
     '''
-    def __init__(self, task_id=None, title="Untitled Task", description=None,
-                 due_date=None, priority=None, complete=False):
-        self.task_id = task_id
-        self.title = title
-        self.description = description
-        self.due_date = due_date
-        self.priority = priority
-        self.complete = complete
+
+    task_id: UniqueId = UniqueId()
+    title: str = str(task_id)
+    description: str = None
+    due_date: str = None
+    priority: str = None
+    complete: bool = False
 
     def update_title(self, title):
         '''Update task `title`'''
