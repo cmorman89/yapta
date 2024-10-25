@@ -30,7 +30,11 @@ class TaskList:
     # CRUD: Read
     def get_task(self, task_id):
         '''Responsible for fetching task from list'''
-        # Lookup logic in `get_task_position`
+        # If it is an integer, use it as index
+        if isinstance(task_id, int):
+            return self.task_queue[task_id]
+        # Otherwise lookup by task_id
+        # Lookup logic is in `get_task_position`
         return self.task_queue[self.get_task_pos(task_id)]
 
     def get_task_pos(self, task_id):
@@ -49,8 +53,9 @@ class TaskList:
     # CRUD: Delete
     def remove_task(self, task_id):
         '''Responsible for removing a task from the list'''
-        for i, task_item in enumerate(self.task_queue):
-            if task_item.task_id == task_id:
-                self.task_queue.pop(i)
+        if self.task_queue:
+            for i, task_item in enumerate(self.task_queue):
+                if task_item.task_id == task_id:
+                    self.task_queue.pop(i)
+                    return self
                 return self
-            return self
