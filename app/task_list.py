@@ -18,7 +18,7 @@ class TaskList:
     operations on `Tasks`
     '''
     list_id: UniqueId = field(default_factory=UniqueId)
-    list_name: str = str(list_id)
+    list_name: str = None
     task_queue: list[Task] = field(default_factory=list)
 
     # CRUD: Create
@@ -49,6 +49,14 @@ class TaskList:
         return None
 
     # CRUD: Update
+    def update_task_list_name(self, list_name):
+        '''Update the list name with a `string`'''
+        # Use list_name if it is non
+        if isinstance(list_name, str) and list_name != "":
+            self.list_name = list_name
+        else:
+            self.list_name = None
+    
     def update_task_position(self, task_id, i):
         '''Responsible for updating task position in list'''
         # Check if there is a task queue

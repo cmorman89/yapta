@@ -62,3 +62,16 @@ def test_update_task_position():
 
     # Get element 1 and check if it matches saved task_id
     assert task_list.get_task(1).task_id == task_id
+
+
+def test_update_task_list_name():
+    '''Update the task list's name'''
+    task_list = TaskList()    
+    
+    task_list.update_task_list_name("New Name")
+    assert task_list.list_name == "New Name"
+    
+    task_list.update_task_list_name("")
+    assert not task_list.list_name
+    task_list.update_task_list_name(None)
+    assert not task_list.list_name
