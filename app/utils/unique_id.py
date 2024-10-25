@@ -5,7 +5,7 @@ Author:         Charles Morman
 '''
 
 
-from uuid import uuid4, UUID
+from uuid import uuid4
 
 
 class UniqueId:
