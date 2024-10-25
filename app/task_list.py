@@ -18,3 +18,23 @@ class TaskList:
     '''
     task_list: list[Task] = field(default_factory=list)
     list_name: str = None
+
+    # CRUD: Create
+    def add_task(self, task):
+        '''Responsible for adding a task to the list'''
+        return self
+
+    # CRUD: Read
+    def get_task(self, task_id):
+        '''Responsible for fetching task from list'''
+        return self
+
+    # CRUD: Update
+    def update_task_position(self, task_id, i):
+        '''Responsible for updating task position in list'''
+        return self
+
+    # CRUD: Delete
+    def delete_task(self, task_id):
+        '''Responsible for removing a task from the list'''
+        return self
