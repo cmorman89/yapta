@@ -1,6 +1,6 @@
 '''
-Module:         task_manager.py
-Description:    Defines the `TaskManager` class that holds `Tasks` and is
+Module:         task_list.py
+Description:    Defines the `TaskList` class that holds `Tasks` and is
                 responsible for task CRUD
 Author:         Charles Morman
 
@@ -11,9 +11,9 @@ from app.task import Task
 
 
 @dataclass
-class TaskManager:
+class TaskList:
     '''
-    The `TaskManager` class is responsible for holding and performing CRUD
+    The `TaskList` class is responsible for holding and performing CRUD
     operations on `Tasks`
     '''
     task_list: list[Task] = field(default_factory=list)
