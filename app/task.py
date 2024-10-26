@@ -6,6 +6,7 @@ Author:         Charles Morman
 
 from dataclasses import dataclass, field
 from app.utils.unique_id import UniqueId
+from app.utils.task_printer import TaskPrinter
 
 
 @dataclass
@@ -45,4 +46,9 @@ class Task:
     def toggle_complete(self):
         """Toggle task `complete` boolean"""
         self.complete = not self.complete
+        return self
+
+    def print_task_card(self):
+        """Print a formatted task card to console"""
+        TaskPrinter.print_task(self)
         return self
