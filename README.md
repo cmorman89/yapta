@@ -1,5 +1,7 @@
 # Yet Another Python To-Do App (YAPTA)
 
+Note: Most my code is in the [develop branch](https://github.com/cmorman89/yapta/tree/develop)
+
 Welcome to the To-Do List of To-Do Lists, affectionately dubbed **"Yet Another Python To-Do App" (YAPTA).**
 
 ***Wait! "Not another Python to-do app!"*** 😱😱😱
