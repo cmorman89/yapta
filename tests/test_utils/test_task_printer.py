@@ -1,6 +1,7 @@
 """Tests the app/utils/task_printer.py module"""
 
 
+import textwrap
 from datetime import datetime
 from app.task import Task
 from app.utils.task_printer import TaskPrinter
@@ -30,17 +31,15 @@ def test_task_printer():
         priority=TASK_PRIORITY,
         complete=True,
         )
-    output = (
-        f"""
-            ====================================================
-            Task Name: {task.task_name}
-            ----------------------------------------------------
-            - Priority:    {task.priority}
-            - Description: {task.description}
-            - Due Date:    {task.due_date}
-            - Status:      {'Completed' if task.complete else "Incomplete"}
-            ====================================================
-        """
-    ).strip(" ")
+    output = textwrap.dedent(f"""
+        ====================================================
+        Task Name: {task.task_name}
+        ----------------------------------------------------
+        - Priority:    {task.priority}
+        - Description: {task.description}
+        - Due Date:    {task.due_date}
+        - Status:      {'Completed' if task.complete else "Incomplete"}
+        ====================================================
+    """).strip(" ")
 
     assert TaskPrinter.task_card_string(task) == output

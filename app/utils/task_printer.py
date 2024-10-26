@@ -5,6 +5,7 @@ Author:         Charles Morman
 """
 
 
+import textwrap
 from dataclasses import dataclass
 
 
@@ -28,8 +29,7 @@ class TaskPrinter:
         """
         Return a formatted card string
         """
-        output = (
-            f"""
+        output = textwrap.dedent(f"""
             ====================================================
             Task Name: {task.task_name}
             ----------------------------------------------------
@@ -38,8 +38,7 @@ class TaskPrinter:
             - Due Date:    {task.due_date}
             - Status:      {'Completed' if task.complete else "Incomplete"}
             ====================================================
-            """
-        ).strip(" ")
+        """).strip(" ")
 
         return output
 
