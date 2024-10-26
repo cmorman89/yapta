@@ -49,3 +49,6 @@ if __name__ == "__main__":
           - Status:      {'Completed'  if task.complete else "Incomplete"}
         ====================================================
         """)
+    task_list.add_task(task)
+    print("\nYour task list is:")
+    task_list.print_todo()
