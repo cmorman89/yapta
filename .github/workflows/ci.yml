@@ -2,9 +2,9 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [main, release/*, feature/*]
+    branches: [main, release/*, feature/*, develop]
   pull_request:
-    branches: [main, release/*]
+    branches: [main, release/*, develop]
 
 jobs:
   lint-and-test:
