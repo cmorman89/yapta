@@ -1,6 +1,9 @@
 # Yet Another Python To-Do App (YAPTA)
 
+Note: Most my code is in the [develop branch](https://github.com/cmorman89/yapta/tree/develop)
+
 ## Intro
+
 Welcome to the To-Do List of To-Do Lists, affectionately dubbed **"Yet Another Python To-Do App" (YAPTA).**
 
 ***Wait! "Not another Python to-do app!"*** 😱😱😱
@@ -21,13 +24,13 @@ So, before you dismiss this as just another "Example Task 1" generator 📒, tak
 >
 > - [X] ~~Build another to-do app~~
 > - [ ] Impress recruiters
-> - [ ] ***[Get a job](mailto:recruiters@cmorman.com"recruiters@cmorman.com")***
+> - [ ] ***[Get a job](mailto:recruiters@cmorman.com)***
 
 *It's not just another Python to-do app, it's...*
 
 ### ***Yet Another Python To Do App***
 
-##### (But really, recruiters—[call me 📞](mailto:recruiters@cmorman.com"recruiters@cmorman.com"))
+##### (But really, recruiters—[call me 📞](mailto:recruiters@cmorman.com))
 
 ---
 
@@ -44,15 +47,16 @@ So, before you dismiss this as just another "Example Task 1" generator 📒, tak
 ## Project Roadmap
 
 - **Frontend Development:**
-    - Develop a responsive web front end using React, TypeScript, JavaScript, Tailwind CSS, and HTML5.
-    - Implement dynamic task and element theming.
-    - Create brand standards including a logo, colors, and typography.
-  
+
+  - Develop a responsive web front end using React, TypeScript, JavaScript, Tailwind CSS, and HTML5.
+  - Implement dynamic task and element theming.
+  - Create brand standards including a logo, colors, and typography.
 - **Backend Development:**
-    - Introduce recurring tasks functionality.
-    - Enable multiple task lists.
-    - Implement task persistence (save and load functionality).
-    - Investigate database options (e.g., SQLite) for storage.
+
+  - Introduce recurring tasks functionality.
+  - Enable multiple task lists.
+  - Implement task persistence (save and load functionality).
+  - Investigate database options (e.g., SQLite) for storage.
 
 ---
 
@@ -62,9 +66,9 @@ So, before you dismiss this as just another "Example Task 1" generator 📒, tak
 - **`pytest`:** Testing framework for unit and integration tests.
 - **`black`:** Code formatter ensuring PEP 8 compliance.
 - **`uuid`:** Library used for generating unique task and list IDs.
-  
+
 ---
 
 ## Setup Instructions
 
-Coming Soon! 
+Coming Soon!
