@@ -1,12 +1,11 @@
-'''Tests the app/task_list.py module'''
-
+"""Tests the app/task_list.py module"""
 
 from app.task import Task
 from app.task_list import TaskList
 
 
 def test_task_list_construction():
-    '''Tests if `TaskList` can be constructed'''
+    """Tests if `TaskList` can be constructed"""
     task = Task()
     task_list = TaskList()
     assert isinstance(task_list, TaskList)
@@ -16,7 +15,7 @@ def test_task_list_construction():
 
 
 def test_add_task_to_list():
-    '''Test if `Task` can be added to `TaskList`'''
+    """Test if `Task` can be added to `TaskList`"""
     task = Task()
     task_list = TaskList()
     task_list.add_task(task)
@@ -25,7 +24,7 @@ def test_add_task_to_list():
 
 
 def test_get_task_from_list():
-    '''Retreive a task by ID'''
+    """Retreive a task by ID"""
     task = Task()
     task_id = task.task_id
     task_list = TaskList()
@@ -36,7 +35,7 @@ def test_get_task_from_list():
 
 
 def test_remove_task_from_list():
-    '''Remove a task based on `task_id`'''
+    """Remove a task based on `task_id`"""
     task = Task()
     task_id = task.task_id
     task_list = TaskList()
@@ -50,7 +49,7 @@ def test_remove_task_from_list():
 
 
 def test_update_task_position():
-    '''Find a task and move it to a new position'''
+    """Find a task and move it to a new position"""
     task_list = TaskList()
     task_list.add_task(Task()).add_task(Task()).add_task(Task())
 
@@ -65,7 +64,7 @@ def test_update_task_position():
 
 
 def test_update_task_list_name():
-    '''Update the task list's name'''
+    """Update the task list's name"""
     task_list = TaskList()
 
     task_list.update_task_list_name("New Name")

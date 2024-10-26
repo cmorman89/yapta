@@ -1,11 +1,10 @@
-'''Tests the app/utils/unique_id.py module'''
-
+"""Tests the app/utils/unique_id.py module"""
 
 from app.utils.unique_id import UniqueId
 
 
 def test_unique_id_construction():
-    '''Generates multiple UUID obj and test if unique'''
+    """Generates multiple UUID obj and test if unique"""
 
     uuid_0 = UniqueId()
     uuid_1 = UniqueId()

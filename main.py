@@ -1,8 +1,8 @@
-'''
+"""
 Note:   This is primarily a live test of functionality
         It is designed to be quick and easy to write
         and use.
-'''
+"""
 
 import time
 from app.task import Task
@@ -39,7 +39,8 @@ if __name__ == "__main__":
         time.sleep(0.2)
 
     print("\nYour task has been created!")
-    print(f"""
+    print(
+        f"""
         ====================================================
         Task Name: {task.task_name}
         ----------------------------------------------------
@@ -48,7 +49,8 @@ if __name__ == "__main__":
           - Due Date:    {task.due_date}
           - Status:      {'Completed'  if task.complete else "Incomplete"}
         ====================================================
-        """)
+        """
+    )
     task_list.add_task(task)
     print("\nYour task list is:")
     task_list.print_todo()
